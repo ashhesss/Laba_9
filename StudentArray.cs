@@ -71,12 +71,14 @@ namespace Laba_9
         public int Count => students.Length;
 
         //Вывод элементов
-        public void PrintElements()
+        public string PrintElements()
         {
+            StringBuilder outputOfStudents = new StringBuilder();
             for (int i = 0; i < students.Length; i++)
             {
-                Console.WriteLine($"Имя: {students[i].Name}, Возраст: {students[i].Age}, GPA: {students[i].Gpa}");
+                outputOfStudents.AppendLine($"Имя: {students[i].Name}, Возраст: {students[i].Age}, GPA: {students[i].Gpa}");
             }
+            return outputOfStudents.ToString();
         }
 
         //Счетчик объектов

@@ -79,9 +79,9 @@ namespace Laba_9
             get { return studentCount; }
         }
 
-        public void PrintInfo()
+        public string PrintInfo()
         {
-            Console.WriteLine($"Name: {name}, Age: {age}, GPA: {gpa}");
+            return ($"Name: {name}, Age: {age}, GPA: {gpa}");
         }
 
         // Сравнение двух студентов (нестатическая)

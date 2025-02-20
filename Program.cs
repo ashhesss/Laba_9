@@ -19,7 +19,7 @@ namespace Laba_9
             try
             {
                 Student student1 = new Student();
-                student1.PrintInfo();
+                Console.WriteLine(student1.PrintInfo());
             }
             catch (Exception ex) { Console.WriteLine(ex.Message); }
 
@@ -27,7 +27,7 @@ namespace Laba_9
             try
             {
                 Student student2 = new Student("Alice", 20, 3.8);
-                student2.PrintInfo();
+                Console.WriteLine(student2.PrintInfo());
             }
             catch (Exception ex)
             {
@@ -53,7 +53,7 @@ namespace Laba_9
             try
             {
                 Student studentTest1 = new Student(" ", 0, 0);
-                studentTest1.PrintInfo();
+                Console.WriteLine(studentTest1.PrintInfo());
             }
             catch (Exception ex)
             {
@@ -64,7 +64,7 @@ namespace Laba_9
             try
             {
                 Student studentTest2 = new Student("Aaron", -5, 3.5);
-                studentTest2.PrintInfo();
+                Console.WriteLine(studentTest2.PrintInfo());
             }
             catch (Exception ex)
             {
@@ -75,7 +75,7 @@ namespace Laba_9
             try
             {
                 Student studentTest3 = new Student("Ethan", 18, -5.35325);
-                studentTest3.PrintInfo();
+                Console.WriteLine(studentTest3.PrintInfo()  );
             }
             catch (Exception ex)
             {
@@ -104,11 +104,11 @@ namespace Laba_9
 
             //Перегрузка операции ~
             Student student6 = ~student3;
-            student6.PrintInfo();
+            Console.WriteLine(student6.PrintInfo());
 
             //Перегрузка операции ++
             Student student7 = ++student6;
-            student7.PrintInfo();
+            Console.WriteLine(student7.PrintInfo());
 
             //Явное преобрзование
             int courseNum = (int)student7;
@@ -121,10 +121,10 @@ namespace Laba_9
             //Бинарные операции
 
             Student newNameStudent = student7 % "Anthony";
-            newNameStudent.PrintInfo();
+            Console.WriteLine(newNameStudent.PrintInfo());
 
             Student student8 = newNameStudent - 2;
-            student8.PrintInfo();
+            Console.WriteLine(student8.PrintInfo());
 
             //Часть 3
             Console.WriteLine("\nЗадание №3");
@@ -138,7 +138,7 @@ namespace Laba_9
             students1[0] = new Student("Steve", 20, 5.6);
             students1[1] = new Student("Ann", 18, 7.89);
             students1[2] = new Student("Mike", 23, 3.515);
-            students1.PrintElements();
+            Console.WriteLine(students1.PrintElements());
 
             //Нахождение самого старшего студента с GPA > 8
             try
@@ -156,14 +156,14 @@ namespace Laba_9
             {
                 StudentArray students2 = new StudentArray(students1);
                 Console.WriteLine("Копия студентов:");
-                students2.PrintElements();
+                Console.WriteLine(students2.PrintElements());
 
                 //Проверка глубокого копирования
                 students1[3] = new Student("Sigma", 22, 5.2); //Изменили элемент в оригинальной коллекции
                 Console.WriteLine("\nОригинальная коллекция:");
-                students1.PrintElements();
+                Console.WriteLine(students1.PrintElements());
                 Console.WriteLine("\nКопия коллекции:");
-                students2.PrintElements();
+                Console.WriteLine(students2.PrintElements());
             }
             catch (Exception ex)
             {
